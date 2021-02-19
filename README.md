@@ -25,5 +25,8 @@ Proyecto del Curso Práctico de NodeJS
 ## Command for install jsonwebtoken
 - `npm i jsonwebtoken`
 
+## Command for install bcrypt
+- `npm i bcrypt`
+
 ## Command for start server with nodemon
 - `nodemon api/index.js`
