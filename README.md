@@ -22,5 +22,8 @@ Proyecto del Curso Práctico de NodeJS
 ## Command for install swagger-ui-express
 - `npm i swagger-ui-express`
 
+## Command for install jsonwebtoken
+- `npm i jsonwebtoken`
+
 ## Command for start server with nodemon
 - `nodemon api/index.js`
