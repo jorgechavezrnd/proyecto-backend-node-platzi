@@ -41,3 +41,6 @@ Proyecto del Curso Práctico de NodeJS
 
 ## Command for start mysql microservice
 - `nodemon mysql/index.js`
+
+## Command for start post microservice
+- `nodemon post/index.js`
