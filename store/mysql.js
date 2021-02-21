@@ -46,7 +46,7 @@ function list(table) {
 
 function get(table, id) {
     return new Promise((resolve, reject) => {
-        connection.query(`SELECT * FROM ${table} WHERE id=${id}`, (err, data) => {
+        connection.query(`SELECT * FROM ${table} WHERE id='${id}'`, (err, data) => {
             if (err) return reject(err);
             resolve(data);
         });
@@ -71,11 +71,17 @@ function update(table, data) {
     });
 }
 
-function upsert(table, data) {
+async function upsert(table, data) {
+    let row = [];
+
     if (data && data.id) {
-        return update(table, data);
-    } else {
+        row = await get(table, data.id);
+    }
+
+    if (row.length === 0) {
         return insert(table, data);
+    } else {
+        return update(table, data);
     }
 }
 
