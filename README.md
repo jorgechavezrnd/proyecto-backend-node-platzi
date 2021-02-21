@@ -33,5 +33,11 @@ Proyecto del Curso Práctico de NodeJS
 ## Command for install mysql
 - `npm i mysql`
 
+## Command for install request
+- `npm i request`
+
 ## Command for start server with nodemon
 - `nodemon api/index.js`
+
+## Command for start mysql microservice
+- `nodemon mysql/index.js`
