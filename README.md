@@ -5,42 +5,34 @@ Proyecto del Curso Práctico de NodeJS
 - Swagger editor: https://editor.swagger.io/
 - JWT: https://jwt.io/
 - Remote MySQL: https://remotemysql.com/
+- pm2: https://pm2.keymetrics.io/
 
 ## Command for generate package.json file
 - `npm init`
 
-## Command for install express
+## Commands used for install dependencies
 - `npm i express`
-
-## Command for install body-parser
 - `npm i body-parser`
-
-## Command for install nanoid
 - `npm i nanoid`
-
-## Command for install nodemon
 - `npm install -g nodemon`
-
-## Command for install swagger-ui-express
 - `npm i swagger-ui-express`
-
-## Command for install jsonwebtoken
 - `npm i jsonwebtoken`
-
-## Command for install bcrypt
 - `npm i bcrypt`
-
-## Command for install mysql
 - `npm i mysql`
-
-## Command for install request
 - `npm i request`
+- `npm i -g pm2`
 
-## Command for start server with nodemon
-- `nodemon api/index.js`
+## Commands for pm2
+- Show active processes: `pm2 status`
+- Show all logs: `pm2 logs`
+- Show logs of one service: `pm2 logs ${serviceName or Id}`, example: `pm2 logs api-principal`
+- Restart one service: `pm2 restart ${serviceNAme of Id}`, example: `pm2 restart api-mysql`
+
+## Command for start api
+- `pm2 start api/index.js --name api-principal`
 
 ## Command for start mysql microservice
-- `nodemon mysql/index.js`
+- `pm2 start mysql/index.js --name api-mysql`
 
 ## Command for start post microservice
-- `nodemon post/index.js`
+- `pm2 start post/index.js --name api-post`
