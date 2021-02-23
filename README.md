@@ -35,6 +35,7 @@ Proyecto del Curso Práctico de NodeJS
 ## Command for vercel
 - Deploy: `vercel .`
 - Start server con local: `vercel dev`
+- Add env variable with vercel secret: `vercel secret add ${var_name} ${var_value}` Example: `vercel secret add REMOTE_DB false`
 
 ## URL examples for deploy in vercel
 - https://proyecto-backend-node-jorgechavezrnd.vercel.app/api/user
