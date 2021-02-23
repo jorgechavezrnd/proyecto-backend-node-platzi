@@ -6,7 +6,9 @@ Proyecto del Curso Práctico de NodeJS
 - JWT: https://jwt.io/
 - Remote MySQL: https://remotemysql.com/
 - pm2: https://pm2.keymetrics.io/
-- vercel: https://vercel.com/
+- Vercel: https://vercel.com/
+- Vercel secrets: https://vercel.com/docs/cli#commands/secrets
+- Redislabs: https://redislabs.com/
 
 ## Command for generate package.json file
 - `npm init`
@@ -23,6 +25,7 @@ Proyecto del Curso Práctico de NodeJS
 - `npm i request`
 - `npm i -g pm2`
 - `npm i -g vercel`
+- `npm i redis`
 
 ## Commands for pm2
 - Show active processes: `pm2 status`
@@ -31,6 +34,9 @@ Proyecto del Curso Práctico de NodeJS
 - Restart one service: `pm2 restart ${serviceNAme of Id}`, example: `pm2 restart api-mysql`
 - Stop one service: `pm2 stop ${serviceNAme of Id}`, example: `pm2 stop api-post`
 - Delete on service: `pm2 delete ${serviceNAme of Id}`, example: `pm2 delete api-post`
+
+## Command for start redis with docker
+- `docker run --name redis -d -p 6379:6379 redis redis-server --requirepass "SUPER_SECRET_PASSWORD"`
 
 ## Command for vercel
 - Deploy: `vercel .`
