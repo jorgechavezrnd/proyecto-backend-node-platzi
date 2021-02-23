@@ -6,6 +6,7 @@ Proyecto del Curso Práctico de NodeJS
 - JWT: https://jwt.io/
 - Remote MySQL: https://remotemysql.com/
 - pm2: https://pm2.keymetrics.io/
+- vercel: https://vercel.com/
 
 ## Command for generate package.json file
 - `npm init`
@@ -21,6 +22,7 @@ Proyecto del Curso Práctico de NodeJS
 - `npm i mysql`
 - `npm i request`
 - `npm i -g pm2`
+- `npm i -g vercel`
 
 ## Commands for pm2
 - Show active processes: `pm2 status`
@@ -29,6 +31,13 @@ Proyecto del Curso Práctico de NodeJS
 - Restart one service: `pm2 restart ${serviceNAme of Id}`, example: `pm2 restart api-mysql`
 - Stop one service: `pm2 stop ${serviceNAme of Id}`, example: `pm2 stop api-post`
 - Delete on service: `pm2 delete ${serviceNAme of Id}`, example: `pm2 delete api-post`
+
+## Command for deploy with vercel
+- `vercel .`
+
+## URL examples for deploy in vercel
+- https://proyecto-backend-node-jorgechavezrnd.vercel.app/api/user
+- https://proyecto-backend-node-jorgechavezrnd.vercel.app/api/post
 
 ## Command for start api
 - `pm2 start api/index.js --name api-principal`
