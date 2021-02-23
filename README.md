@@ -9,6 +9,7 @@ Proyecto del Curso Práctico de NodeJS
 - Vercel: https://vercel.com/
 - Vercel secrets: https://vercel.com/docs/cli#commands/secrets
 - Redislabs: https://redislabs.com/
+- Upstash (for redis online): https://console.upstash.com/pages/overall
 
 ## Command for generate package.json file
 - `npm init`
@@ -37,6 +38,14 @@ Proyecto del Curso Práctico de NodeJS
 
 ## Command for start redis with docker
 - `docker run --name redis -d -p 6379:6379 redis redis-server --requirepass "SUPER_SECRET_PASSWORD"`
+- Modify 'config.js' file with this data:
+```
+redis: {
+    host: process.env.REDIS_HOST || 'localhost',
+    port: process.env.REDIS_PORT || 6379,
+    password: process.env.REDIS_PASS || 'SUPER_SECRET_PASSWORD'
+}
+```
 
 ## Command for vercel
 - Deploy: `vercel .`

@@ -24,8 +24,8 @@ module.exports = {
         port: process.env.MYSQL_SRV_PORT || 3003,
     },
     redis: {
-        host: process.env.REDIS_HOST || 'localhost',
-        port: process.env.REDIS_PORT || 6379,
-        password: process.env.REDIS_PASS || 'SUPER_SECRET_PASSWORD'
+        host: process.env.REDIS_HOST || 'us1-delicate-teal-32106.upstash.io',
+        port: process.env.REDIS_PORT || 32106,
+        password: process.env.REDIS_PASS || '1663b932d2f4438a8019b518184a4e11'
     }
 };
