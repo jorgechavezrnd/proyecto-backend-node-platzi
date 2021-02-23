@@ -32,8 +32,9 @@ Proyecto del Curso Práctico de NodeJS
 - Stop one service: `pm2 stop ${serviceNAme of Id}`, example: `pm2 stop api-post`
 - Delete on service: `pm2 delete ${serviceNAme of Id}`, example: `pm2 delete api-post`
 
-## Command for deploy with vercel
-- `vercel .`
+## Command for vercel
+- Deploy: `vercel .`
+- Start server con local: `vercel dev`
 
 ## URL examples for deploy in vercel
 - https://proyecto-backend-node-jorgechavezrnd.vercel.app/api/user
