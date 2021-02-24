@@ -64,3 +64,31 @@ redis: {
 
 ## Command for start post microservice
 - `pm2 start post/index.js --name api-post`
+
+## Commands for deploy on virtual machine (after connect with ssh)
+- Go to home folder:
+    - `cd ~`
+- Install node:
+    - `curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh`
+    - `sudo bash nodesource_setup.sh`
+    - `sudo apt-get install -y nodejs`
+- Install git:
+    - `sudo apt-get intall git`
+- Install PM2:
+    - `sudo npm install -g pm2`
+- Delete 'nodesource_setup.sh' file:
+    - `rm nodesource_setup.sh`
+- Clone repository with source code:
+    - `git clone https://github.com/jorgechavezrnd/proyecto-backend-node-platzi.git`
+- Install dependencies:
+    - `cd proyecto-backend-node-platzi`
+    - `npm install`
+- Start services with pm2:
+    - `pm2 start mysql/index.js --name api-mysql`
+    - `pm2 start cache/index.js --name api-cache`
+    - `pm2 start api/index.js --name api-principal`
+    - `pm2 start post/index.js --name api-post`
+- Show status:
+    - `pm2 status`
+- Show logs:
+    - `pm2 logs`
