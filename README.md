@@ -65,7 +65,7 @@ redis: {
 ## Command for start post microservice
 - `pm2 start post/index.js --name api-post`
 
-## Commands for deploy on virtual machine (after connect with ssh)
+## Commands for deploy on virtual machine with ubuntu (after connect with ssh)
 - Go to home folder:
     - `cd ~`
 - Install node:
