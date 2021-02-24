@@ -92,3 +92,26 @@ redis: {
     - `pm2 status`
 - Show logs:
     - `pm2 logs`
+
+## Nginx
+- Install: `sudo apt-get install nginx`
+- Start service: `sudo service nginx start`
+- To be sure about service is running, go to http://192.168.183.130/ where "192.168.183.130" is the IP if the virtual machine
+- Stop service: `sudo service nginx stop`
+- Modify configuration for nginx: `sudo nano /etc/nginx/sites-available/default`
+- Add this lines to the file "default", after "location / {...":
+```
+location /api/user {
+    proxy_pass http://localhost:3000;
+}
+location /api/auth {
+    proxy_pass http://localhost:3000;
+}
+location /api/post {
+    proxy_pass http://localhost:3002;
+}
+```
+- Restart nginx service: `sudo service nginx restart`
+- URLs for test server (where "192.168.183.130" is the IP of the server):
+    - http://192.168.183.130/api/user
+    - http://192.168.183.130/api/post
